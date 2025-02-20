@@ -12,15 +12,18 @@
   font-size: 1.2rem;
   font-weight: bold;
   text-align: left;
+  display: block;
 }
 
 .login-input {
-  width: 100%;
+  width: 94%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.login-button {
+.login-button { 
   width: 100%;
   padding: 10px;
   border: none;
@@ -29,6 +32,7 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 20px;
 }
 .login-button:hover {
   background-color: #0056b3;
