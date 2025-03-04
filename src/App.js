@@ -1,8 +1,8 @@
-import Login from "./page/Login";
+import Weather from './page/Weather';
 
 function App(){
   return(
-    <Login />
+    <Weather />
   )
 }
 
