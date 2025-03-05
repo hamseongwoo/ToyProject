@@ -1,21 +1,42 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.screen{
-    display: flex;
-    width: 100vw; 
-    height: 100vh; 
-    justify-content: center; 
-    align-items: center; 
+.screen {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    width: 500px;
-    height: 600px;
-    background-color: skyblue;
-    border-radius: 20PX;
+  display: flex;
+  width: 500px;
+  height: 600px;
+  background-color: skyblue;
+  border-radius: 20px;
+  justify-content: center;
+  padding-top: 20px;
 }
 
+.city {
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.button {
+  width: 80px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

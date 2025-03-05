@@ -1,4 +1,4 @@
-import Weather from './page/Weather';
+import Weather from './page/weather';
 
 function App(){
   return(
