@@ -13,8 +13,7 @@ const humidity = document.getElementById("humidity");
 const clouds = document.querySelector(".clouds");
 const wind = document.querySelector(".wind");
 const description = document.querySelector(".description");
-const area = document.querySelector(".area  ");
-const weatherData = document.querySelector("[weatherData]");
+const area = document.querySelector(".area");
 
 async function getWeather() {
   try {
@@ -26,6 +25,14 @@ async function getWeather() {
     description.innerText = `전체적인 날씨: ${data.weather[0].description}`;
     clouds.innerText = `흐림 정도: ${data.clouds.all}%`;
     wind.innerText = `풍속: ${data.wind.speed}m/s`;
+
+    temp.innerText = `현재 온도: ${data.main.temp}°C`;
+    feels_like.innerText = `체감 온도: ${data.main.feels_like}°C`;
+    temp_min.innerText = `최저 기온: ${data.main.temp_min}°C`;
+    temp_max.innerText = `최고 기온: ${data.main.temp_max}°C`;
+    pressure.innerText = `기압: ${data.main.pressure} hPa`;
+    humidity.innerText = `습도: ${data.main.humidity}%`;
+
     
   } catch (error) {
     console.error("오류 발생", error);
