@@ -17,7 +17,12 @@ const area = document.querySelector(".area  ");
 const weatherData = document.querySelector("[weatherData]");
 
 async function getWeather() {
-  await fetch().then();
+  try{
+
+  }
+  catch(error){
+    console.error("오류 발생", error);
+  }
 }
 
 function Weather() {
