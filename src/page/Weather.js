@@ -20,6 +20,13 @@ async function getWeather() {
   try {
     const url = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric&lang=kr`;
     const response = await fetch(url);
+    const data = await response.json();
+
+    area.innerText = `검색 지역: ${data.name}`;
+    description.innerText = `전체적인 날씨: ${data.weather[0].description}`;
+    clouds.innerText = `흐림 정도: ${data.clouds.all}%`;
+    wind.innerText = `풍속: ${data.wind.speed}m/s`;
+    
   } catch (error) {
     console.error("오류 발생", error);
   }
