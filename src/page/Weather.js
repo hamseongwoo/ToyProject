@@ -1,26 +1,24 @@
 import "./Weather.css";
 
-const API_KEY = "";
+const API_KEY = "dee6c11b0dc85f0c38be60e7ef8b696d";
 const BASE_URL = "http://api.openweathermap.org/data/2.5/weather";
 
-const stateName = [
-  "현재 온도",
-  "체감 온도",
-  "최저 기온",
-  "최고 기온",
-  "기압",
-  "습도",
-];
+const temp = document.getElementById("temp");
+const feels_like = document.getElementById("feels_like");
+const temp_min = document.getElementById("temp_min");
+const temp_max = document.getElementById("temp_max");
+const pressure = document.getElementById("pressure");
+const humidity = document.getElementById("humidity");
 
-async function getWeather(){
-    await fetch().then();
+const clouds = document.querySelector(".clouds");
+const wind = document.querySelector(".wind");
+const description = document.querySelector(".description");
+const area = document.querySelector(".area  ");
+const weatherData = document.querySelector("[weatherData]");
+
+async function getWeather() {
+  await fetch().then();
 }
-
-const clouds = document.querySelector('.clouds');
-const wind = document.querySelector('.wind');
-const description = document.querySelector('.description');
-const area = document.querySelector('.area  ');
-const weatherData = document.querySelector('[weatherData]');
 
 function Weather() {
   return (
