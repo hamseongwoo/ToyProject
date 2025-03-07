@@ -17,10 +17,10 @@ const area = document.querySelector(".area  ");
 const weatherData = document.querySelector("[weatherData]");
 
 async function getWeather() {
-  try{
-
-  }
-  catch(error){
+  try {
+    const url = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric&lang=kr`;
+    const response = await fetch(url);
+  } catch (error) {
     console.error("오류 발생", error);
   }
 }
