@@ -30,6 +30,11 @@ function Weather() {
             type="text"
             value={city}
             onChange={(e) => setCity(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                getWeather(city);
+              }
+            }}
             placeholder="도시를 입력하세요"
           />
           <button onClick={() => getWeather(city)}>검색</button>
