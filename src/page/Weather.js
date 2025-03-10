@@ -18,6 +18,9 @@ function Weather() {
       console.error("오류 발생", error);
     }
   }
+  useEffect(() => {
+    getWeather(city);
+  }, []);
 
   return (
     <div className="screen">
@@ -35,11 +38,15 @@ function Weather() {
         {weather && (
           <>
             <div className="area">검색 지역: {weather.name}</div>
-            <div className="description">전체적인 날씨: {weather.weather[0].description}</div>
+            <div className="description">
+              전체적인 날씨: {weather.weather[0].description}
+            </div>
             <div className="clouds">흐림 정도: {weather.clouds.all}%</div>
             <div className="wind">풍속: {weather.wind.speed}m/s</div>
             <div className="temp">현재 온도: {weather.main.temp}°C</div>
-            <div className="feels_like">체감 온도: {weather.main.feels_like}°C</div>
+            <div className="feels_like">
+              체감 온도: {weather.main.feels_like}°C
+            </div>
             <div className="temp_min">최저 기온: {weather.main.temp_min}°C</div>
             <div className="temp_max">최고 기온: {weather.main.temp_max}°C</div>
             <div className="pressure">기압: {weather.main.pressure} hPa</div>
